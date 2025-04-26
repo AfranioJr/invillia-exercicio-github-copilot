@@ -76,26 +76,29 @@ section h3 {
 
 .activity-card ul {
   margin-top: 10px;
-  margin-right: 10px; /* Added right margin */
-  padding: 10px 15px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  background-color: #e8f5e9;
-  list-style-type: disc;
-  color: #333;
+  margin-right: 10px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f1f8e9; /* Suave tom de verde */
+  list-style-type: none; /* Remove marcadores padrão */
 }
 
 .activity-card ul::before {
-  content: "Participants:"; /* Added title inside the list */
+  content: "Participants:";
   display: block;
   font-weight: bold;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
   color: #1a237e;
 }
 
 .activity-card ul li {
-  margin-bottom: 5px;
-  padding-left: 5px;
+  margin-bottom: 8px;
+  padding: 8px;
+  background-color: #ffffff; /* Fundo branco para cada item */
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .form-group {
