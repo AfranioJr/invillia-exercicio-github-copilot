@@ -17,6 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
       Object.entries(activities).forEach(([name, details]) => {
         const activityCard = document.createElement("div");
         activityCard.className = "activity-card";
+        activityCard.setAttribute("data-activity", details.category || "default"); // Add category for styling
 
         const spotsLeft = details.max_participants - details.participants.length;
 
@@ -25,11 +26,13 @@ document.addEventListener("DOMContentLoaded", () => {
           <p>${details.description}</p>
           <p><strong>Schedule:</strong> ${details.schedule}</p>
           <p><strong>Availability:</strong> ${spotsLeft} spots left</p>
-          <p><strong>Participants:</strong> ${
-            details.participants.length > 0
-              ? details.participants.join(", ")
-              : "No participants yet"
-          }</p>
+          <ul>
+            ${
+              details.participants.length > 0
+                ? details.participants.map(participant => `<li>${participant}</li>`).join("")
+                : "<li>No participants yet</li>"
+            }
+          </ul>
         `;
 
         activitiesList.appendChild(activityCard);
