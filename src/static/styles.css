@@ -76,12 +76,12 @@ section h3 {
 
 .activity-card ul {
   margin-top: 10px;
-  margin-right: 10px;
   padding: 15px;
   border: 1px solid #ccc;
   border-radius: 8px;
   background-color: #f1f8e9; /* Suave tom de verde */
   list-style-type: none; /* Remove marcadores padrão */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adiciona sombra */
 }
 
 .activity-card ul::before {
@@ -99,6 +99,8 @@ section h3 {
   border: 1px solid #ddd;
   border-radius: 5px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  font-size: 14px; /* Tamanho de fonte ajustado */
+  color: #333;
 }
 
 .form-group {
